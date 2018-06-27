@@ -10,12 +10,12 @@ import java.util.Map;
 @ControllerAdvice
 public class GlobalDefaultExceptionHandler {
 
-    @ExceptionHandler(Exception.class)
-    @ResponseBody
-    public Map<String,Object> defaultExceptionHandler(Exception e){
-        Map<String,Object> map = new HashMap<String,Object>();
-        map.put("code",500);
-        map.put("msg",e.getMessage());
-        return map;
-    }
+//    @ExceptionHandler(Exception.class)
+//    @ResponseBody
+//    public Map<String,Object> defaultExceptionHandler(Exception e){
+//        Map<String,Object> map = new HashMap<String,Object>();
+//        map.put("code",500);
+//        map.put("msg",e.getMessage());
+//        return map;
+//    }
 }

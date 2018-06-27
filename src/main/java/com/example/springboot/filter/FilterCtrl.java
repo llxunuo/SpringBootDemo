@@ -19,7 +19,7 @@ public class FilterCtrl implements Filter {
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         long start = System.currentTimeMillis();
         filterChain.doFilter(servletRequest,servletResponse);
-        logger.info("filter耗时："+(System.currentTimeMillis()-start));
+//        logger.info("filter耗时："+(System.currentTimeMillis()-start));
     }
 
     @Override
