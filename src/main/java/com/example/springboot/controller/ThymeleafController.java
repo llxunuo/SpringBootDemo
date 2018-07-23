@@ -24,7 +24,7 @@ public class ThymeleafController {
     public User retUser() throws Exception {
         User s = new User();
         s.setId(1);
-        s.setUsername("zhangsan");
+        s.setUsername("张三");
         s.setPassword("123");
         s.setBirthday(new Date());
 //        throw new Exception("返回json错误");

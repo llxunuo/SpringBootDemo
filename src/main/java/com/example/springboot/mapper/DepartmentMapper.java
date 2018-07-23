@@ -5,6 +5,8 @@ import org.apache.ibatis.annotations.Mapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Mapper
 @Component
 public interface DepartmentMapper {
@@ -15,4 +17,6 @@ public interface DepartmentMapper {
     public void update(Department department);
 
     public void deleteById(Integer id);
+
+    public List<Department> queryAll();
 }

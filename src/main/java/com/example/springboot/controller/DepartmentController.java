@@ -59,4 +59,13 @@ public class DepartmentController {
         map.put("msg", "删除成功");
         return map;
     }
+
+    @RequestMapping("/transaction")
+    public Map<String,Object> transaction() {
+        this.departmentService.transaction();
+        Map<String,Object> map = new HashMap<String,Object>();
+        map.put("code", "200");
+        map.put("msg", "保存成功");
+        return map;
+    }
 }

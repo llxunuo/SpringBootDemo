@@ -1,7 +1,13 @@
 package com.example.springboot.controller.vo;
 
+
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
 
+@Getter
+@Setter
 public class Department implements Serializable {
 //    private static final long serialVersionUID = 6067283535977178571L;
 
@@ -11,27 +17,27 @@ public class Department implements Serializable {
 
     private String descr;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescr() {
-        return descr;
-    }
-
-    public void setDescr(String descr) {
-        this.descr = descr;
-    }
+//    public Integer getId() {
+//        return id;
+//    }
+//
+//    public void setId(Integer id) {
+//        this.id = id;
+//    }
+//
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+//
+//    public String getDescr() {
+//        return descr;
+//    }
+//
+//    public void setDescr(String descr) {
+//        this.descr = descr;
+//    }
 }

@@ -12,7 +12,7 @@ public class AmqpSender {
     private AmqpTemplate amqpTemplate;
 
     /**
-     * 简单模式发送
+     * 简单模式发送     header
      *
      * @param message
      */
@@ -21,7 +21,7 @@ public class AmqpSender {
     }
 
     /**
-     * 发布/订阅模式发送
+     * 发布/订阅模式发送  fanout
      *
      * @param message
      */
@@ -32,14 +32,14 @@ public class AmqpSender {
     /**
      * 路由模式发送
      *
-     * @param message
+     * @param message   direct
      */
     public void routingSend(String routingKey, String message) {
         this.amqpTemplate.convertAndSend(AmqpConfirguration.DIRECT_EXCHANGE, routingKey, message);
     }
 
     /**
-     * 主题模式发送
+     * 主题模式发送          topic
      *
      * @param routingKey
      * @param message

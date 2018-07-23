@@ -3,6 +3,12 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.springboot.mapper.DepartmentMapper">
 
+    <resultMap id="allDepartment" type="com.example.springboot.controller.vo.Department">
+        <id column="id" property="id" jdbcType="INTEGER"></id>
+        <result column="name" property="name" jdbcType="VARCHAR"></result>
+        <result column="descr" property="descr" jdbcType="VARCHAR"></result>
+    </resultMap>
+
     <insert id="insert" parameterType="com.example.springboot.controller.vo.Department">
         insert into department(id,name,descr) values(#{id},#{name},#{descr})
     </insert>
@@ -18,4 +24,8 @@
     <delete id="deleteById" parameterType="java.lang.Integer">
         delete from department where id = #{id}
     </delete>
+
+    <select id="queryAll" resultMap="allDepartment">
+        select * from department
+    </select>
 </mapper>
