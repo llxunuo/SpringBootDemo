@@ -16,7 +16,7 @@ public class AmqpConfirguration {
         return new Queue(SIMPLE_QUEUE, true);
     }
 
-    //===============发布/订阅模式============
+    //===============发布/订阅模式============fanont
 
     public static final String PS_QUEUE_1 = "ps_queue_1";
     public static final String PS_QUEUE_2 = "ps_queue_2";
@@ -47,7 +47,7 @@ public class AmqpConfirguration {
         return BindingBuilder.bind(psQueue2()).to(fanoutExchange());
     }
 
-    //===============路由模式============
+    //===============路由模式============ direct
 
     public static final String ROUTING_QUEUE_1 = "routing_queue_1";
     public static final String ROUTING_QUEUE_2 = "routing_queue_2";
@@ -78,7 +78,7 @@ public class AmqpConfirguration {
         return BindingBuilder.bind(routingQueue2()).to(directExchange()).with("order");
     }
 
-    //===============主题模式============
+    //===============主题模式============topic
 
     public static final String TOPIC_QUEUE_1 = "topic_queue_1";
     public static final String TOPIC_QUEUE_2 = "topic_queue_2";

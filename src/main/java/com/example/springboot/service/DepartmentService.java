@@ -17,7 +17,17 @@ import java.util.List;
 
 @CacheConfig(cacheNames = "department")
 @Service
-public class DepartmentService {
+public class DepartmentService extends Department{
+
+    public String name = "123";
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     @Autowired
     private DepartmentMapper departmentMapper;

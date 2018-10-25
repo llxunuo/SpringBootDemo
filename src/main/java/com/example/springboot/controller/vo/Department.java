@@ -11,6 +11,8 @@ import java.io.Serializable;
 public class Department implements Serializable {
 //    private static final long serialVersionUID = 6067283535977178571L;
 
+    public String str="public value";
+
     private Integer id;
 
     private String name;

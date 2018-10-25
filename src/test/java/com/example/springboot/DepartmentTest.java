@@ -2,6 +2,8 @@ package com.example.springboot;
 
 import com.example.springboot.controller.vo.Department;
 import com.example.springboot.mapper.DepartmentMapper;
+import com.example.springboot.service.DepartmentService;
+import com.github.pagehelper.PageInfo;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,5 +43,14 @@ public class DepartmentTest {
     @Test
     public void testDeleteById() {
         this.departmentMapper.deleteById(1);
+    }
+
+    @Autowired
+    private DepartmentService departmentService;
+
+    @Test
+    public void queryAll() {
+        PageInfo<Department> departmentPageInfo = this.departmentService.queryAll();
+        System.out.println(departmentPageInfo);
     }
 }
